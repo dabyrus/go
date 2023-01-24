@@ -1,9 +1,10 @@
 package main
+
 import "fmt"
 
 func main() {
 	a := 3
-	b := 4
+	b := 5
 	c := a + b
-   fmt.Println(c) 
+	fmt.Println(c)
 }
