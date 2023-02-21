@@ -12,3 +12,32 @@ func TestSum(t *testing.T) {
 		t.Fatalf("Должно было быть %d, а было %d", 9, sum)
 	}
 }
+func TestMax(t *testing.T) {
+	max := Max([]int{1, 2, 3})
+	if max != 3 {
+		t.Fatalf("Должно было быть %d, а было %d", 3, max)
+	}
+	max = Max([]int{4, 2, 3})
+	if max != 4 {
+		t.Fatalf("Должно было быть %d, а было %d", 4, max)
+	}
+	max = Max([]int{-3, -2, -1})
+	if max != -1 {
+		t.Fatalf("Должно было быть %d, а было %d", -1, max)
+	}
+}
+
+func TestMin(t *testing.T) {
+	max := Min([]int{1, 2, 3})
+	if max != 1 {
+		t.Fatalf("Должно было быть %d, а было %d", 1, max)
+	}
+	max = Min([]int{4, 2, 3})
+	if max != 2 {
+		t.Fatalf("Должно было быть %d, а было %d", 2, max)
+	}
+	max = Min([]int{-3, -2, -1})
+	if max != -3 {
+		t.Fatalf("Должно было быть %d, а было %d", -3, max)
+	}
+}
