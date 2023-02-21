@@ -43,7 +43,7 @@ func Min(numbers []int) int {
 func Avg(numbers []int) int {
 	return Sum(numbers) / len(numbers)
 }
-
+//нужно перемножить
 func Product(numbers []int) int {
 	return 0
 }
