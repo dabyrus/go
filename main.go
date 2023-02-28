@@ -5,12 +5,14 @@ import (
 )
 
 func main() {
-	numbers := []int{3, 4, 9, 6, 9, 99, 1, 8, 45}
+	numbers := []int{2, 2, 3}
 	sum := Sum(numbers)
 	max := Max(numbers)
 	min := Min(numbers)
 	avg := Avg(numbers)
-	fmt.Println(sum, max, min, avg)
+	product := Product(numbers)
+	count := Count(numbers)
+	fmt.Println(sum, max, min, avg, product, count)
 }
 
 func Sum(numbers []int) int {
@@ -43,9 +45,12 @@ func Min(numbers []int) int {
 func Avg(numbers []int) int {
 	return Sum(numbers) / len(numbers)
 }
-//нужно перемножить
 func Product(numbers []int) int {
-	return 0
+	var result int = 1
+	for _, number := range numbers {
+		result = result * number
+	}
+	return result
 }
 
 func Count(numbers []int) int {
